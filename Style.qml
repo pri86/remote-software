@@ -89,7 +89,7 @@ QtObject {
 
         readonly property string close: "\uE915"
         readonly property string home: "\uE900"
-        readonly property string epg: "\uf00b"
+        readonly property string epg: "\uF00B"
 
         readonly property string light: "\uE901"
         readonly property string link: "\uE902"
@@ -98,10 +98,10 @@ QtObject {
         readonly property string next: "\uE904"
         readonly property string pause: "\uE905"
         readonly property string play: "\uE906"
-        readonly property string forward: "\uf04e"
-        readonly property string backward: "\uf04a"
-        readonly property string info: "\uf129"
-        readonly property string stop: "\uf04d"
+        readonly property string forward: "\uF04E"
+        readonly property string backward: "\uF04A"
+        readonly property string info: "\uF129"
+        readonly property string stop: "\uF04D"
         readonly property string playlist: "\uE907"
         readonly property string search: "\uE90C"
         readonly property string speaker: "\uE90D"

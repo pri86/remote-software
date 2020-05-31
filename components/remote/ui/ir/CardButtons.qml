@@ -25,6 +25,8 @@ import Haptic 1.0
 
 import Entity.Remote 1.0
 
+import "qrc:/basic_ui" as BasicUI
+
 Item {
     width: parent.width - 60
     anchors.horizontalCenter: parent.horizontalCenter
@@ -90,7 +92,7 @@ Item {
            }
        }
 
-       Button {
+       BasicUI.IconButton {
            visible: obj.isSupported(Remote.F_PREVIOUS)
            title: Style.icon.prev
            mouseArea.onClicked: {
@@ -98,7 +100,7 @@ Item {
            }
        }
 
-       Button {
+       BasicUI.IconButton {
            visible: obj.isSupported(Remote.F_PLAY)
            title: Style.icon.play
            mouseArea.onClicked: {
@@ -106,7 +108,7 @@ Item {
            }
        }
 
-       Button {
+       BasicUI.IconButton {
            visible: obj.isSupported(Remote.F_NEXT)
            title: Style.icon.next
            mouseArea.onClicked: {
@@ -114,7 +116,7 @@ Item {
            }
        }
 
-       Button {
+       BasicUI.IconButton {
            visible: obj.isSupported(Remote.F_BACKWARD)
            title: Style.icon.backward
            mouseArea.onClicked: {
@@ -122,7 +124,7 @@ Item {
            }
        }
 
-       Button {
+       BasicUI.IconButton {
            visible: obj.isSupported(Remote.F_STOP)
            title: Style.icon.stop
            mouseArea.onClicked: {
@@ -130,7 +132,7 @@ Item {
            }
        }
 
-       Button {
+       BasicUI.IconButton {
            visible: obj.isSupported(Remote.F_FORWARD)
            title: Style.icon.forward
            mouseArea.onClicked: {
@@ -138,7 +140,7 @@ Item {
            }
        }
 
-       Button {
+       BasicUI.IconButton {
            visible: obj.isSupported(Remote.F_INFO)
            title: Style.icon.info
            mouseArea.onClicked: {
@@ -146,7 +148,7 @@ Item {
            }
        }
 
-       Button {
+       BasicUI.IconButton {
            visible: obj.isSupported(Remote.F_HOME)
            title: Style.icon.home
            mouseArea.onClicked: {
@@ -154,7 +156,7 @@ Item {
            }
        }
 
-       Button {
+       BasicUI.IconButton {
            visible: obj.isSupported(Remote.F_GUIDE)
            title: Style.icon.epg
            mouseArea.onClicked: {
@@ -166,7 +168,7 @@ Item {
     Grid {
 
        columns: 4
-       spacing: 60
+       spacing: 50
 
        anchors.bottom: parent.bottom
        anchors.horizontalCenter: parent.horizontalCenter
