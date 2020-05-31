@@ -76,7 +76,7 @@ Item {
 
        Button {
            visible: obj.isSupported(Remote.F_APP)
-           title: qsTr("Mode") + translateHandler.emptyString
+           title: qsTr("Shield") + translateHandler.emptyString
            mouseArea.onClicked: {
                obj.app();
            }
@@ -92,7 +92,7 @@ Item {
 
        Button {
            visible: obj.isSupported(Remote.F_PREVIOUS)
-           title: qsTr("Prev") + translateHandler.emptyString
+           title: Style.icon.prev
            mouseArea.onClicked: {
                obj.previous();
            }
@@ -108,7 +108,7 @@ Item {
 
        Button {
            visible: obj.isSupported(Remote.F_NEXT)
-           title: qsTr("Next") + translateHandler.emptyString
+           title: Style.icon.next
            mouseArea.onClicked: {
                obj.next();
            }
@@ -116,7 +116,7 @@ Item {
 
        Button {
            visible: obj.isSupported(Remote.F_BACKWARD)
-           title: qsTr("Bwrd") + translateHandler.emptyString
+           title: Style.icon.backward
            mouseArea.onClicked: {
                obj.backward();
            }
@@ -124,7 +124,7 @@ Item {
 
        Button {
            visible: obj.isSupported(Remote.F_STOP)
-           title: qsTr("Stop") + translateHandler.emptyString
+           title: Style.icon.stop
            mouseArea.onClicked: {
                obj.stop();
            }
@@ -132,7 +132,7 @@ Item {
 
        Button {
            visible: obj.isSupported(Remote.F_FORWARD)
-           title: qsTr("Fwrd") + translateHandler.emptyString
+           title: Style.icon.forward
            mouseArea.onClicked: {
                obj.forward();
            }
@@ -140,7 +140,7 @@ Item {
 
        Button {
            visible: obj.isSupported(Remote.F_INFO)
-           title: qsTr("Info") + translateHandler.emptyString
+           title: Style.icon.info
            mouseArea.onClicked: {
                obj.info();
            }
@@ -148,7 +148,7 @@ Item {
 
        Button {
            visible: obj.isSupported(Remote.F_HOME)
-           title: qsTr("Shield") + translateHandler.emptyString
+           title: Style.icon.home
            mouseArea.onClicked: {
                obj.home();
            }
@@ -156,7 +156,7 @@ Item {
 
        Button {
            visible: obj.isSupported(Remote.F_GUIDE)
-           title: qsTr("Guide") + translateHandler.emptyString
+           title: Style.icon.epg
            mouseArea.onClicked: {
                obj.guide();
            }
