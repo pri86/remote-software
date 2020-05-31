@@ -172,17 +172,61 @@ Item {
        anchors.horizontalCenter: parent.horizontalCenter
 
        Rectangle {
-           id: greenButton
            visible: obj.isSupported(Remote.F_FUNCTION_GREEN)
            width: 60
            height: 60
            radius: height/2
-           color: Style.color.green
+           color: "#41b812"
            MouseArea {
                anchors.fill: parent
                onClicked: {
                    Haptic.playEffect(Haptic.Click);
                    obj.function_green();
+               }
+           }
+       }
+
+       Rectangle {
+           visible: obj.isSupported(Remote.F_FUNCTION_RED)
+           width: 60
+           height: 60
+           radius: height/2
+           color: "#d13530"
+           MouseArea {
+               anchors.fill: parent
+               onClicked: {
+                   Haptic.playEffect(Haptic.Click);
+                   obj.function_red();
+               }
+           }
+       }
+
+       Rectangle {
+           visible: obj.isSupported(Remote.F_FUNCTION_BLUE)
+           width: 60
+           height: 60
+           radius: height/2
+           color: "#3347cc"
+           MouseArea {
+               anchors.fill: parent
+               onClicked: {
+                   Haptic.playEffect(Haptic.Click);
+                   obj.function_blue();
+               }
+           }
+       }
+
+       Rectangle {
+           visible: obj.isSupported(Remote.F_FUNCTION_YELLOW)
+           width: 60
+           height: 60
+           radius: height/2
+           color: "#e9ed09"
+           MouseArea {
+               anchors.fill: parent
+               onClicked: {
+                   Haptic.playEffect(Haptic.Click);
+                   obj.function_yellow();
                }
            }
        }
