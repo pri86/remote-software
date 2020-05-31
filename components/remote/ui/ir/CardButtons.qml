@@ -55,7 +55,7 @@ Item {
             id: mouseArea
             anchors.fill: parent
             onClicked: {
-                haptic.playEffect(Haptic.Click);
+                Haptic.playEffect(Haptic.Click);
                 if (obj.isSupported(Remote.F_POWER_TOGGLE)) {
                     obj.powerToggle();
                 } else if (obj.isSupported(Remote.F_POWER_ON) && obj.isSupported(Remote.F_POWER_OFF)) {
