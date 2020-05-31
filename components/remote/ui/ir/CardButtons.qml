@@ -21,6 +21,7 @@
  *****************************************************************************/
 import QtQuick 2.11
 import Style 1.0
+import Haptic 1.0
 
 import Entity.Remote 1.0
 
