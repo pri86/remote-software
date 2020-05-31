@@ -78,34 +78,34 @@ Item {
         }
     }
 
-    Button {
-        visible: obj.isSupported(Remote.F_INFO)
-        anchors.bottom: parent.bottom
-        anchors.left: parent.left
-        title: qsTr("Info") + translateHandler.emptyString
-        mouseArea.onClicked: {
-            obj.info();
-        }
-    }
+    Grid {
+       columns: 3
+       columnSpacing: 2
+       rowSpacing: 2
+       
+       Button {
+           visible: obj.isSupported(Remote.F_INFO)
+           title: qsTr("Info") + translateHandler.emptyString
+           mouseArea.onClicked: {
+               obj.info();
+           }
+       }
 
-    Button {
-        visible: obj.isSupported(Remote.F_HOME)
-        anchors.bottom: parent.bottom
-        anchors.horizontalCenter: parent.horizontalCenter
-        title: qsTr("Shield") + translateHandler.emptyString
-        mouseArea.onClicked: {
-            obj.home();
-        }
-    }
+       Button {
+           visible: obj.isSupported(Remote.F_HOME)
+           title: qsTr("Shield") + translateHandler.emptyString
+           mouseArea.onClicked: {
+               obj.home();
+           }
+       }
 
-    Button {
-        visible: obj.isSupported(Remote.F_GUIDE)
-        anchors.bottom: parent.bottom
-        anchors.right: parent.right
-        title: qsTr("Guide") + translateHandler.emptyString
-        mouseArea.onClicked: {
-            obj.guide();
-        }
+       Button {
+           visible: obj.isSupported(Remote.F_GUIDE)
+           title: qsTr("Guide") + translateHandler.emptyString
+           mouseArea.onClicked: {
+               obj.guide();
+           }
+       }
     }
 
 }
