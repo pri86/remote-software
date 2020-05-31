@@ -89,12 +89,12 @@ Item {
     }
 
     Button {
-        visible: obj.isSupported(Remote.F_MENU)
+        visible: obj.isSupported(Remote.F_HOME)
         anchors.bottom: parent.bottom
         anchors.horizontalCenter: parent.horizontalCenter
-        title: qsTr("Menu") + translateHandler.emptyString
+        title: qsTr("Shield") + translateHandler.emptyString
         mouseArea.onClicked: {
-            obj.menu();
+            obj.home();
         }
     }
 
@@ -109,6 +109,3 @@ Item {
     }
 
 }
-
-
-
