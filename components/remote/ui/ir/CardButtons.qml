@@ -100,7 +100,7 @@ Item {
 
        Button {
            visible: obj.isSupported(Remote.F_PLAY)
-           title: qsTr("Play") + translateHandler.emptyString
+           title: Style.icon.play
            mouseArea.onClicked: {
                obj.play();
            }
