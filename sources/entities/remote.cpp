@@ -75,6 +75,12 @@ void Remote::record() { command(RemoteDef::C_RECORD, ""); }
 
 void Remote::live() { command(RemoteDef::C_LIVE, ""); }
 
+// color buttons
+void Remote::function_green() { command(RemoteDef::C_FUNCTION_GREEN, ""); }
+void Remote::function_red() { command(RemoteDef::C_FUNCTION_RED, ""); }
+void Remote::function_blue() { command(RemoteDef::C_FUNCTION_BLUE, ""); }
+void Remote::function_yellow() { command(RemoteDef::C_FUNCTION_YELLOW, ""); }
+
 // navigation
 void Remote::cursorUp() { command(RemoteDef::C_CURSOR_UP, ""); }
 

@@ -67,6 +67,12 @@ class Remote : public Entity, RemoteInterface {
     Q_INVOKABLE void exit();
     Q_INVOKABLE void app();
 
+    // color buttons
+    Q_INVOKABLE void function_green();
+    Q_INVOKABLE void function_red();
+    Q_INVOKABLE void function_blue();
+    Q_INVOKABLE void function_yellow();
+
     // power commands
     Q_INVOKABLE void powerOn();
     Q_INVOKABLE void powerOff();

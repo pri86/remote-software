@@ -163,4 +163,30 @@ Item {
        }
     }
 
+    Grid {
+
+       columns: 4
+       spacing: 30
+
+       anchors.bottom: parent.bottom
+       anchors.horizontalCenter: parent.horizontalCenter
+
+       Rectangle {
+           id: greenButton
+           visible: obj.isSupported(Remote.F_FUNCTION_GREEN)
+           width: 60
+           height: 60
+           radius: height/2
+           color: Style.color.green
+           MouseArea {
+               anchors.fill: parent
+               onClicked: {
+                   Haptic.playEffect(Haptic.Click);
+                   obj.function_green();
+               }
+           }
+       }
+
+    }
+
 }
