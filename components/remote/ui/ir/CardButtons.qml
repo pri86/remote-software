@@ -166,7 +166,7 @@ Item {
     Grid {
 
        columns: 4
-       spacing: 30
+       spacing: 60
 
        anchors.bottom: parent.bottom
        anchors.horizontalCenter: parent.horizontalCenter
