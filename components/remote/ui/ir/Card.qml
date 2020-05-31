@@ -91,12 +91,12 @@ Rectangle {
                 break;
             case ButtonHandler.TOP_LEFT:
                 if (obj.isSupported(Remote.F_BACK)) {
-                    obj.muteToggle();
+                    obj.back();
                 }
                 break;
             case ButtonHandler.BOTTOM_LEFT:
                 if (obj.isSupported(Remote.F_MUTE_TOGGLE)) {
-                    obj.back();
+                    obj.muteToggle();
                 }
                 break;
             case ButtonHandler.TOP_RIGHT:
