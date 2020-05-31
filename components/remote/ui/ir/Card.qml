@@ -90,16 +90,16 @@ Rectangle {
                 }
                 break;
             case ButtonHandler.TOP_LEFT:
-                if (obj.isSupported(Remote.F_MUTE_TOGGLE)) {
+                if (obj.isSupported(Remote.F_BACK)) {
                     obj.muteToggle();
                 }
                 break;
             case ButtonHandler.BOTTOM_LEFT:
-                if (obj.isSupported(Remote.F_BACK)) {
+                if (obj.isSupported(Remote.F_MUTE_TOGGLE)) {
                     obj.back();
                 }
                 break;
-            case ButtonHandler.BOTTOM_RIGHT:
+            case ButtonHandler.TOP_RIGHT:
                 if (obj.isSupported(Remote.F_MENU)) {
                     obj.menu();
                 }
@@ -208,7 +208,7 @@ Rectangle {
             Text {
                 color: Style.color.text
                 opacity: 0.5
-                text: qsTr("Mute") + translateHandler.emptyString
+                text: qsTr("Back") + translateHandler.emptyString
                 verticalAlignment: Text.AlignVCenter
                 anchors { left: parent.left; leftMargin: 50; verticalCenter: parent.verticalCenter }
                 font { family: "Open Sans Regular"; pixelSize: 24 }
@@ -233,7 +233,7 @@ Rectangle {
             Text {
                 color: Style.color.text
                 opacity: 0.5
-                text: qsTr("Back") + translateHandler.emptyString
+                text: qsTr("Mute") + translateHandler.emptyString
                 verticalAlignment: Text.AlignVCenter
                 anchors { left: parent.left; leftMargin: 50; verticalCenter: parent.verticalCenter }
                 font { family: "Open Sans Regular"; pixelSize: 24 }
@@ -248,7 +248,7 @@ Rectangle {
 
             Text {
                 color: Style.color.text
-                text: Style.icon.square_full
+                text: Style.icon.circle_full
                 width: 60; height: 60
                 verticalAlignment: Text.AlignVCenter; horizontalAlignment: Text.AlignHCenter
                 font { family: "icons"; pixelSize: 60 }
