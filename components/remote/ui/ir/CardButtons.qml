@@ -32,8 +32,7 @@ Item {
     Grid {
 
        columns: 3
-       columnSpacing: 5
-       rowSpacing: 5
+       spacing: 30
 
        anchors.top: parent.top
        anchors.horizontalCenter: parent.horizontalCenter
