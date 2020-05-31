@@ -32,8 +32,11 @@ Item {
     Grid {
 
        columns: 3
-       columnSpacing: 2
-       rowSpacing: 2
+       columnSpacing: 5
+       rowSpacing: 5
+
+       anchors.top: parent.top
+       anchors.horizontalCenter: parent.horizontalCenter
 
        Rectangle {
            id: bg
