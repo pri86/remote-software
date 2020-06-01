@@ -243,7 +243,7 @@ int main(int argc, char* argv[]) {
 
     // LOAD ICONS
     QFontDatabase::addApplicationFont(appPath + "/icons/icons.ttf");
-    QFontDatabase::addApplicationFont(appPath + "/icons/icons2.ttf");
+    QFontDatabase::addApplicationFont(appPath + "/icons/extra-icons.ttf");
 
     // set rending of text
     QQuickWindow::setTextRenderType(QQuickWindow::NativeTextRendering);

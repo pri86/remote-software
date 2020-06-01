@@ -44,7 +44,6 @@ class Remote : public Entity, RemoteInterface {
     // transport and media controls
     Q_INVOKABLE void play();
     Q_INVOKABLE void pause();
-    Q_INVOKABLE void playToggle();
     Q_INVOKABLE void stop();
     Q_INVOKABLE void forward();
     Q_INVOKABLE void backward();
@@ -69,12 +68,19 @@ class Remote : public Entity, RemoteInterface {
 
     //extra
     Q_INVOKABLE void avr_info();
+    Q_INVOKABLE void subtitle();
+    Q_INVOKABLE void audio();
+    Q_INVOKABLE void tv_menu();
 
     // color buttons
-    Q_INVOKABLE void function_green();
-    Q_INVOKABLE void function_red();
-    Q_INVOKABLE void function_blue();
-    Q_INVOKABLE void function_yellow();
+    Q_INVOKABLE void av_green();
+    Q_INVOKABLE void av_red();
+    Q_INVOKABLE void av_blue();
+    Q_INVOKABLE void av_yellow();
+    Q_INVOKABLE void tv_green();
+    Q_INVOKABLE void tv_red();
+    Q_INVOKABLE void tv_blue();
+    Q_INVOKABLE void tv_yellow();
 
     // power commands
     Q_INVOKABLE void powerOn();
@@ -84,7 +90,6 @@ class Remote : public Entity, RemoteInterface {
     // tuner commands
     Q_INVOKABLE void channelUp();
     Q_INVOKABLE void channelDown();
-    Q_INVOKABLE void channelSearch();
     Q_INVOKABLE void toFavorite();
     Q_INVOKABLE void guide();
     Q_INVOKABLE void channel(int ch);

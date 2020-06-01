@@ -33,41 +33,89 @@ Item {
 
     Grid {
 
-       columns: 4
-       spacing: 20
+       columns: 3
+       spacing: 30
 
-       anchors.bottom: parent.bottom
+       anchors.top: parent.top
        anchors.horizontalCenter: parent.horizontalCenter
 
        Button {
-           visible: obj.isSupported(Remote.F_FORMAT_4_3)
-           title: Style.icon.myaudio
+           visible: obj.isSupported(Remote.F_DIGIT_1)
+           title: "1"
            mouseArea.onClicked: {
-               obj.audio();
+               obj.channel(1);
            }
        }
 
        Button {
-           visible: obj.isSupported(Remote.F_CHANNEL_SEARCH)
-           title: Style.icon.mysubtitle
+           visible: obj.isSupported(Remote.F_DIGIT_2)
+           title: "2"
            mouseArea.onClicked: {
-               obj.subtitle();
+               obj.channel(2);
            }
        }
 
        Button {
-           visible: obj.isSupported(Remote.F_FORMAT_AUTO)
-           title: Style.icon.mysettings
+           visible: obj.isSupported(Remote.F_DIGIT_3)
+           title: "3"
            mouseArea.onClicked: {
-               obj.tv_menu();
+               obj.channel(3);
            }
        }
 
        Button {
-           visible: obj.isSupported(Remote.F_PLAYTOGGLE)
-           title: Style.icon.myinfo
+           visible: obj.isSupported(Remote.F_DIGIT_4)
+           title: "4"
            mouseArea.onClicked: {
-               obj.avr_info();
+               obj.channel(4);
+           }
+       }
+
+       Button {
+           visible: obj.isSupported(Remote.F_DIGIT_5)
+           title: "5"
+           mouseArea.onClicked: {
+               obj.channel(5);
+           }
+       }
+
+       Button {
+           visible: obj.isSupported(Remote.F_DIGIT_6)
+           title: "6"
+           mouseArea.onClicked: {
+               obj.channel(6);
+           }
+       }
+
+       Button {
+           visible: obj.isSupported(Remote.F_DIGIT_7)
+           title: "7"
+           mouseArea.onClicked: {
+               obj.channel(7);
+           }
+       }
+
+       Button {
+           visible: obj.isSupported(Remote.F_DIGIT_8)
+           title: "8"
+           mouseArea.onClicked: {
+               obj.channel(8);
+           }
+       }
+
+       Button {
+           visible: obj.isSupported(Remote.F_DIGIT_9)
+           title: "9"
+           mouseArea.onClicked: {
+               obj.channel(9);
+           }
+       }
+
+       Button {
+           visible: obj.isSupported(Remote.F_DIGIT_0)
+           title: "0"
+           mouseArea.onClicked: {
+               obj.channel(0);
            }
        }
     }
@@ -81,22 +129,7 @@ Item {
        anchors.horizontalCenter: parent.horizontalCenter
 
        Rectangle {
-           visible: obj.isSupported(Remote.F_FUNCTION_GREEN)
-           width: 60
-           height: 60
-           radius: height/2
-           color: "#41b812"
-           MouseArea {
-               anchors.fill: parent
-               onClicked: {
-                   Haptic.playEffect(Haptic.Click);
-                   obj.function_green();
-               }
-           }
-       }
-
-       Rectangle {
-           visible: obj.isSupported(Remote.F_FUNCTION_RED)
+           visible: obj.isSupported(Remote.F_DIGIT12)
            width: 60
            height: 60
            radius: height/2
@@ -105,28 +138,28 @@ Item {
                anchors.fill: parent
                onClicked: {
                    Haptic.playEffect(Haptic.Click);
-                   obj.function_red();
+                   obj.tv_red();
                }
            }
        }
 
        Rectangle {
-           visible: obj.isSupported(Remote.F_FUNCTION_BLUE)
+           visible: obj.isSupported(Remote.F_DIGIT11)
            width: 60
            height: 60
            radius: height/2
-           color: "#3347cc"
+           color: "#41b812"
            MouseArea {
                anchors.fill: parent
                onClicked: {
                    Haptic.playEffect(Haptic.Click);
-                   obj.function_blue();
+                   obj.tv_green();
                }
            }
        }
 
        Rectangle {
-           visible: obj.isSupported(Remote.F_FUNCTION_YELLOW)
+           visible: obj.isSupported(Remote.F_DIGIT_ENTER)
            width: 60
            height: 60
            radius: height/2
@@ -135,11 +168,25 @@ Item {
                anchors.fill: parent
                onClicked: {
                    Haptic.playEffect(Haptic.Click);
-                   obj.function_yellow();
+                   obj.tv_yellow();
+               }
+           }
+       }
+
+       Rectangle {
+           visible: obj.isSupported(Remote.F_DIGIT_SEPARATOR)
+           width: 60
+           height: 60
+           radius: height/2
+           color: "#3347cc"
+           MouseArea {
+               anchors.fill: parent
+               onClicked: {
+                   Haptic.playEffect(Haptic.Click);
+                   obj.tv_blue();
                }
            }
        }
 
     }
-
 }

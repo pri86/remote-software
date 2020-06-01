@@ -183,7 +183,7 @@ Item {
                anchors.fill: parent
                onClicked: {
                    Haptic.playEffect(Haptic.Click);
-                   obj.function_green();
+                   obj.av_green();
                }
            }
        }
@@ -198,7 +198,7 @@ Item {
                anchors.fill: parent
                onClicked: {
                    Haptic.playEffect(Haptic.Click);
-                   obj.function_red();
+                   obj.av_red();
                }
            }
        }
@@ -213,7 +213,7 @@ Item {
                anchors.fill: parent
                onClicked: {
                    Haptic.playEffect(Haptic.Click);
-                   obj.function_blue();
+                   obj.av_blue();
                }
            }
        }
@@ -228,7 +228,7 @@ Item {
                anchors.fill: parent
                onClicked: {
                    Haptic.playEffect(Haptic.Click);
-                   obj.function_yellow();
+                   obj.av_yellow();
                }
            }
        }

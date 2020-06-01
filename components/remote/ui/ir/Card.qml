@@ -159,6 +159,12 @@ Rectangle {
             sourceComponent: extraButtonView
         }
 
+        //number pad
+        Loader {
+            asynchronous: true
+            sourceComponent: numPadView
+        }
+
         // channels
 //         Loader {
 // //            active: SwipeView.isCurrentItem
@@ -175,6 +181,11 @@ Rectangle {
     Component {
         id: extraButtonView
         CardExtraButtons {}
+    }
+
+    Component {
+        id: numPadView
+        CardNumPad {}
     }
 
     // Component {
