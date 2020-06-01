@@ -94,7 +94,7 @@ Item {
 
        Button {
            visible: obj.isSupported(Remote.F_PREVIOUS)
-           title: Style.icon.prev
+           title: Style.icon.prev2
            mouseArea.onClicked: {
                obj.previous();
            }
@@ -102,7 +102,7 @@ Item {
 
        Button {
            visible: obj.isSupported(Remote.F_PLAY)
-           title: Style.icon.play
+           title: Style.icon.play2
            mouseArea.onClicked: {
                obj.play();
            }
@@ -110,7 +110,7 @@ Item {
 
        Button {
            visible: obj.isSupported(Remote.F_NEXT)
-           title: Style.icon.next
+           title: Style.icon.next2
            mouseArea.onClicked: {
                obj.next();
            }
