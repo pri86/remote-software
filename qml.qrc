@@ -52,6 +52,7 @@
         <file>components/media_player/ui/CardPlaylists.qml</file>
         <file>components/remote/ui/ir/CardChannels.qml</file>
         <file>components/remote/ui/ir/CardButtons.qml</file>
+        <file>components/remote/ui/ir/CardExtraButtons.qml</file>
         <file>components/remote/ui/ir/Button.qml</file>
         <file>components/climate/ui/Button.qml</file>
         <file>components/climate/ui/Card.qml</file>
