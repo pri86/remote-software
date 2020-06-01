@@ -40,7 +40,7 @@ Item {
        anchors.horizontalCenter: parent.horizontalCenter
 
        Button {
-           visible: obj.isSupported(Remote.F_AVR_INFO)
+           visible: obj.isSupported(Remote.F_PLAYTOGGLE)
            title: Style.icon.myinfo
            mouseArea.onClicked: {
                obj.avr_info();
