@@ -94,7 +94,7 @@ Item {
 
        Button {
            visible: obj.isSupported(Remote.F_PREVIOUS)
-           title: Style.icon.prev2
+           title: Style.icon.myprev
            mouseArea.onClicked: {
                obj.previous();
            }
@@ -102,7 +102,7 @@ Item {
 
        Button {
            visible: obj.isSupported(Remote.F_PLAY)
-           title: Style.icon.play2
+           title: Style.icon.myplay
            mouseArea.onClicked: {
                obj.play();
            }
@@ -110,7 +110,7 @@ Item {
 
        Button {
            visible: obj.isSupported(Remote.F_NEXT)
-           title: Style.icon.next2
+           title: Style.icon.mynext
            mouseArea.onClicked: {
                obj.next();
            }
@@ -118,7 +118,7 @@ Item {
 
        Button {
            visible: obj.isSupported(Remote.F_BACKWARD)
-           title: Style.icon.backward
+           title: Style.icon.mybackward
            mouseArea.onClicked: {
                obj.backward();
            }
@@ -126,7 +126,7 @@ Item {
 
        Button {
            visible: obj.isSupported(Remote.F_STOP)
-           title: Style.icon.stop
+           title: Style.icon.mystop
            mouseArea.onClicked: {
                obj.stop();
            }
@@ -134,7 +134,7 @@ Item {
 
        Button {
            visible: obj.isSupported(Remote.F_FORWARD)
-           title: Style.icon.forward
+           title: Style.icon.myforward
            mouseArea.onClicked: {
                obj.forward();
            }
@@ -142,7 +142,7 @@ Item {
 
        Button {
            visible: obj.isSupported(Remote.F_INFO)
-           title: Style.icon.info
+           title: Style.icon.myinfo
            mouseArea.onClicked: {
                obj.info();
            }
@@ -150,7 +150,7 @@ Item {
 
        Button {
            visible: obj.isSupported(Remote.F_HOME)
-           title: Style.icon.home
+           title: Style.icon.myhome
            mouseArea.onClicked: {
                obj.home();
            }
@@ -158,7 +158,7 @@ Item {
 
        Button {
            visible: obj.isSupported(Remote.F_GUIDE)
-           title: Style.icon.epg
+           title: Style.icon.myepg
            mouseArea.onClicked: {
                obj.guide();
            }
