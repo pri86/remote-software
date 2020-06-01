@@ -71,8 +71,6 @@ void Remote::recordings() { command(RemoteDef::C_RECORDINGS, ""); }
 
 void Remote::record() { command(RemoteDef::C_RECORD, ""); }
 
-void Remote::live() { command(RemoteDef::C_LIVE, ""); }
-
 // color buttons
 void Remote::av_green() { command(RemoteDef::C_FUNCTION_GREEN, ""); }
 void Remote::av_red() { command(RemoteDef::C_FUNCTION_RED, ""); }
@@ -96,8 +94,6 @@ void Remote::cursorOK() { command(RemoteDef::C_CURSOR_OK, ""); }
 
 void Remote::back() { command(RemoteDef::C_BACK, ""); }
 
-void Remote::home() { command(RemoteDef::C_HOME, ""); }
-
 void Remote::menu() { command(RemoteDef::C_MENU, ""); }
 
 void Remote::exit() { command(RemoteDef::C_EXIT, ""); }
@@ -109,6 +105,9 @@ void Remote::avr_info() { command(RemoteDef::C_PLAYTOGGLE, ""); }
 void Remote::subtitle() { command(RemoteDef::C_CHANNEL_SEARCH, ""); }
 void Remote::audio() { command(RemoteDef::C_FORMAT_4_3, ""); }
 void Remote::tv_menu() { command(RemoteDef::C_FORMAT_AUTO, ""); }
+void Remote::tv_prev_ch() { command(RemoteDef::C_DIGIT_10, ""); }
+void Remote::kodi_menu() { command(RemoteDef::C_LIVE, ""); }
+void Remote::shield_home() { command(RemoteDef::C_HOME, ""); }
 
 // power commands
 void Remote::powerOn() { command(RemoteDef::C_POWER_ON, ""); }

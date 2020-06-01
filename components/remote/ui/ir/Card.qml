@@ -153,12 +153,6 @@ Rectangle {
             sourceComponent: buttonView
         }
 
-        //extra buttons
-        Loader {
-            asynchronous: true
-            sourceComponent: extraButtonView
-        }
-
         //number pad
         Loader {
             asynchronous: true
@@ -176,11 +170,6 @@ Rectangle {
     Component {
         id: buttonView
         CardButtons {}
-    }
-
-    Component {
-        id: extraButtonView
-        CardExtraButtons {}
     }
 
     Component {

@@ -52,7 +52,6 @@ class Remote : public Entity, RemoteInterface {
     Q_INVOKABLE void info();
     Q_INVOKABLE void recordings();
     Q_INVOKABLE void record();
-    Q_INVOKABLE void live();
 
     // navigation
     Q_INVOKABLE void cursorUp();
@@ -61,7 +60,6 @@ class Remote : public Entity, RemoteInterface {
     Q_INVOKABLE void cursorRight();
     Q_INVOKABLE void cursorOK();
     Q_INVOKABLE void back();
-    Q_INVOKABLE void home();
     Q_INVOKABLE void menu();
     Q_INVOKABLE void exit();
     Q_INVOKABLE void app();
@@ -71,6 +69,9 @@ class Remote : public Entity, RemoteInterface {
     Q_INVOKABLE void subtitle();
     Q_INVOKABLE void audio();
     Q_INVOKABLE void tv_menu();
+    Q_INVOKABLE void tv_prev_ch();
+    Q_INVOKABLE void shield_home();
+    Q_INVOKABLE void kodi_menu();
 
     // color buttons
     Q_INVOKABLE void av_green();

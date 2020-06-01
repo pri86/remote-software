@@ -40,6 +40,30 @@ Item {
        anchors.horizontalCenter: parent.horizontalCenter
 
        Button {
+           visible: obj.isSupported(Remote.F_APP)
+           title: qsTr("Shield") + translateHandler.emptyString
+           mouseArea.onClicked: {
+               obj.app();
+           }
+       }
+
+       Button {
+           visible: false
+           title: "dummy"
+           mouseArea.onClicked: {
+               obj.app();
+           }
+       }
+
+       Button {
+           visible: obj.isSupported(Remote.F_SOURCE)
+           title: qsTr("Source") + translateHandler.emptyString
+           mouseArea.onClicked: {
+               obj.source();
+           }
+       }
+
+       Button {
            visible: obj.isSupported(Remote.F_DIGIT_1)
            title: "1"
            mouseArea.onClicked: {
@@ -112,10 +136,50 @@ Item {
        }
 
        Button {
+           visible: obj.isSupported(Remote.F_FORMAT_AUTO)
+           title: Style.icon.mysettings
+           mouseArea.onClicked: {
+               obj.tv_menu();
+           }
+       }
+
+       Button {
            visible: obj.isSupported(Remote.F_DIGIT_0)
            title: "0"
            mouseArea.onClicked: {
                obj.channel(0);
+           }
+       }
+
+       Button {
+           visible: obj.isSupported(Remote.F_DIGIT_10)
+           title: Style.icon.myreturn
+           mouseArea.onClicked: {
+               obj.tv_prev_ch();
+           }
+       }
+
+       Button {
+           visible: obj.isSupported(Remote.F_PLAYTOGGLE)
+           title: Style.icon.myinfo
+           mouseArea.onClicked: {
+               obj.avr_info();
+           }
+       }
+
+       Button {
+           visible: obj.isSupported(Remote.F_CHANNEL_SEARCH)
+           title: Style.icon.mysubtitle
+           mouseArea.onClicked: {
+               obj.subtitle();
+           }
+       }
+
+       Button {
+           visible: obj.isSupported(Remote.F_FORMAT_4_3)
+           title: Style.icon.myaudio
+           mouseArea.onClicked: {
+               obj.audio();
            }
        }
     }

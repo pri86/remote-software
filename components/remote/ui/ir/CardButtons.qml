@@ -77,18 +77,18 @@ Item {
        } // Rectangle end
 
        Button {
-           visible: obj.isSupported(Remote.F_APP)
-           title: qsTr("Shield") + translateHandler.emptyString
+           visible: obj.isSupported(Remote.F_HOME)
+           title: Style.icon.myhome
            mouseArea.onClicked: {
-               obj.app();
+               obj.shield_home();
            }
        }
 
        Button {
-           visible: obj.isSupported(Remote.F_SOURCE)
-           title: qsTr("Source") + translateHandler.emptyString
+           visible: obj.isSupported(Remote.F_RECORD)
+           title: Style.icon.myrecord
            mouseArea.onClicked: {
-               obj.source();
+               obj.record();
            }
        }
 
@@ -149,18 +149,18 @@ Item {
        }
 
        Button {
-           visible: obj.isSupported(Remote.F_HOME)
-           title: Style.icon.myhome
-           mouseArea.onClicked: {
-               obj.home();
-           }
-       }
-
-       Button {
            visible: obj.isSupported(Remote.F_GUIDE)
            title: Style.icon.myepg
            mouseArea.onClicked: {
                obj.guide();
+           }
+       }
+
+       Button {
+           visible: obj.isSupported(Remote.F_LIVE)
+           title: Style.icon.mymenu
+           mouseArea.onClicked: {
+               obj.kodi_menu();
            }
        }
     }
