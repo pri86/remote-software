@@ -102,7 +102,7 @@ Item {
 
        Button {
            visible: obj.isSupported(Remote.F_PLAY)
-           iconImage.source: "play.svg"
+           title: Style.icon.play
            mouseArea.onClicked: {
                obj.play();
            }
