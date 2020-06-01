@@ -174,6 +174,66 @@ Item {
        anchors.horizontalCenter: parent.horizontalCenter
 
        Rectangle {
+           visible: obj.isSupported(Remote.F_DIGIT12)
+           width: 60
+           height: 60
+           radius: height/2
+           color: "#d13530"
+           MouseArea {
+               anchors.fill: parent
+               onClicked: {
+                   Haptic.playEffect(Haptic.Click);
+                   obj.tv_red();
+               }
+           }
+       }
+
+       Rectangle {
+           visible: obj.isSupported(Remote.F_DIGIT11)
+           width: 60
+           height: 60
+           radius: height/2
+           color: "#41b812"
+           MouseArea {
+               anchors.fill: parent
+               onClicked: {
+                   Haptic.playEffect(Haptic.Click);
+                   obj.tv_green();
+               }
+           }
+       }
+
+       Rectangle {
+           visible: obj.isSupported(Remote.F_DIGIT_ENTER)
+           width: 60
+           height: 60
+           radius: height/2
+           color: "#e9ed09"
+           MouseArea {
+               anchors.fill: parent
+               onClicked: {
+                   Haptic.playEffect(Haptic.Click);
+                   obj.tv_yellow();
+               }
+           }
+       }
+
+       Rectangle {
+           visible: obj.isSupported(Remote.F_DIGIT_SEPARATOR)
+           width: 60
+           height: 60
+           radius: height/2
+           color: "#3347cc"
+           MouseArea {
+               anchors.fill: parent
+               onClicked: {
+                   Haptic.playEffect(Haptic.Click);
+                   obj.tv_blue();
+               }
+           }
+       }
+
+       Rectangle {
            visible: obj.isSupported(Remote.F_FUNCTION_GREEN)
            width: 60
            height: 60
