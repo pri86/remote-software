@@ -153,12 +153,18 @@ Rectangle {
             sourceComponent: buttonView
         }
 
-        // channels
+        //extra buttons
         Loader {
-//            active: SwipeView.isCurrentItem
             asynchronous: true
-            sourceComponent: channelView
+            sourceComponent: extraButtonView
         }
+
+        // channels
+//         Loader {
+// //            active: SwipeView.isCurrentItem
+//             asynchronous: true
+//             sourceComponent: channelView
+//         }
     }
 
     Component {
@@ -167,9 +173,14 @@ Rectangle {
     }
 
     Component {
-        id: channelView
-        CardChannels {}
+        id: extraButtonView
+        CardExtraButtons {}
     }
+
+    // Component {
+    //     id: channelView
+    //     CardChannels {}
+    // }
 
     PageIndicator {
         id: indicator

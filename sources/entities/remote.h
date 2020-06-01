@@ -67,6 +67,9 @@ class Remote : public Entity, RemoteInterface {
     Q_INVOKABLE void exit();
     Q_INVOKABLE void app();
 
+    //extra
+    Q_INVOKABLE void avr_info();
+
     // color buttons
     Q_INVOKABLE void function_green();
     Q_INVOKABLE void function_red();

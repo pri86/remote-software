@@ -102,6 +102,9 @@ void Remote::exit() { command(RemoteDef::C_EXIT, ""); }
 
 void Remote::app() { command(RemoteDef::C_APP, ""); }
 
+// extra commands
+void Remote::avr_info() { command(RemoteDef::C_AVR_INFO, ""); }
+
 // power commands
 void Remote::powerOn() { command(RemoteDef::C_POWER_ON, ""); }
 

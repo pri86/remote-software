@@ -381,7 +381,8 @@
                         "OUTPUT_AUDIO_X",
                         "OUTPUT_X",
                         "SERVICE_NETFLIX",
-                        "SERVICE_HULU"
+                        "SERVICE_HULU",
+                        "AVR_INFO"
                       ],
                       "title": "The Button_map Schema"
                     },
@@ -518,7 +519,8 @@
                     "OUTPUT_AUDIO_X",
                     "OUTPUT_X",
                     "SERVICE_NETFLIX",
-                    "SERVICE_HULU"
+                    "SERVICE_HULU",
+                    "AVR_INFO"
                   ],
                   "title": "Feature"
                 }
