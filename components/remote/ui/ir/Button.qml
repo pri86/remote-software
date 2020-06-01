@@ -64,4 +64,8 @@ Rectangle {
             bg.color = Style.color.backgroundTransparent
         }
     }
+
+    Image {
+      id: iconImage
+    }
 } // Rectangle end
