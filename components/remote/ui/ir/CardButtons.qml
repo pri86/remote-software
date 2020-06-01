@@ -92,7 +92,7 @@ Item {
            }
        }
 
-       BasicUI.IconButton {
+       Button {
            visible: obj.isSupported(Remote.F_PREVIOUS)
            title: Style.icon.prev
            mouseArea.onClicked: {
@@ -100,7 +100,7 @@ Item {
            }
        }
 
-       BasicUI.IconButton {
+       Button {
            visible: obj.isSupported(Remote.F_PLAY)
            title: Style.icon.play
            mouseArea.onClicked: {
@@ -108,7 +108,7 @@ Item {
            }
        }
 
-       BasicUI.IconButton {
+       Button {
            visible: obj.isSupported(Remote.F_NEXT)
            title: Style.icon.next
            mouseArea.onClicked: {
@@ -116,7 +116,7 @@ Item {
            }
        }
 
-       BasicUI.IconButton {
+       Button {
            visible: obj.isSupported(Remote.F_BACKWARD)
            title: Style.icon.backward
            mouseArea.onClicked: {
@@ -124,7 +124,7 @@ Item {
            }
        }
 
-       BasicUI.IconButton {
+       Button {
            visible: obj.isSupported(Remote.F_STOP)
            title: Style.icon.stop
            mouseArea.onClicked: {
@@ -132,7 +132,7 @@ Item {
            }
        }
 
-       BasicUI.IconButton {
+       Button {
            visible: obj.isSupported(Remote.F_FORWARD)
            title: Style.icon.forward
            mouseArea.onClicked: {
@@ -140,7 +140,7 @@ Item {
            }
        }
 
-       BasicUI.IconButton {
+       Button {
            visible: obj.isSupported(Remote.F_INFO)
            title: Style.icon.info
            mouseArea.onClicked: {
@@ -148,7 +148,7 @@ Item {
            }
        }
 
-       BasicUI.IconButton {
+       Button {
            visible: obj.isSupported(Remote.F_HOME)
            title: Style.icon.home
            mouseArea.onClicked: {
@@ -156,7 +156,7 @@ Item {
            }
        }
 
-       BasicUI.IconButton {
+       Button {
            visible: obj.isSupported(Remote.F_GUIDE)
            title: Style.icon.epg
            mouseArea.onClicked: {
