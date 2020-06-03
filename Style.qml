@@ -118,6 +118,7 @@ QtObject {
         readonly property string mysettings: "\uE80C"
         readonly property string mymenu: "\uE80D"
         readonly property string myreturn: "\uE80E"
+        readonly property string mygoback: "\uE80F"
 
         readonly property string power_on: "\uE908"
         readonly property string remote: "\uE90B"

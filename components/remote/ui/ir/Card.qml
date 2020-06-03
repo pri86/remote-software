@@ -100,8 +100,8 @@ Rectangle {
                 }
                 break;
             case ButtonHandler.TOP_RIGHT:
-                if (obj.isSupported(Remote.F_MENU)) {
-                    obj.menu();
+                if (obj.isSupported(Remote.F_GUIDE)) {
+                    obj.guide();
                 }
                 break;
             }
@@ -269,7 +269,7 @@ Rectangle {
             Text {
                 color: Style.color.text
                 opacity: 0.5
-                text: qsTr("Menu") + translateHandler.emptyString
+                text: qsTr("Guide") + translateHandler.emptyString
                 verticalAlignment: Text.AlignVCenter
                 anchors { left: parent.left; leftMargin: 50; verticalCenter: parent.verticalCenter }
                 font { family: "Open Sans Regular"; pixelSize: 24 }

@@ -141,30 +141,6 @@ Item {
        }
 
        Button {
-           visible: obj.isSupported(Remote.F_INFO)
-           title: Style.icon.myinfo
-           mouseArea.onClicked: {
-               obj.info();
-           }
-       }
-
-       Button {
-           visible: obj.isSupported(Remote.F_GUIDE)
-           title: Style.icon.myepg
-           mouseArea.onClicked: {
-               obj.guide();
-           }
-       }
-
-       Button {
-           visible: obj.isSupported(Remote.F_LIVE)
-           title: Style.icon.mymenu
-           mouseArea.onClicked: {
-               obj.kodi_menu();
-           }
-       }
-
-       Button {
            visible: obj.isSupported(Remote.F_FORMAT_4_3)
            title: Style.icon.myaudio
            mouseArea.onClicked: {
@@ -179,6 +155,30 @@ Item {
                obj.subtitle();
            }
        }
+
+       Button {
+           visible: obj.isSupported(Remote.F_LIVE)
+           title: Style.icon.mymenu
+           mouseArea.onClicked: {
+               obj.kodi_menu();
+           }
+       }
+
+       Button {
+           visible: obj.isSupported(Remote.F_MENU)
+           title: Style.icon.mygoback
+           mouseArea.onClicked: {
+               obj.menu();
+           }
+       }
+
+      Button {
+          visible: obj.isSupported(Remote.F_INFO)
+          title: Style.icon.myinfo
+          mouseArea.onClicked: {
+              obj.info();
+          }
+      }
     }
 
     Grid {
