@@ -46,12 +46,16 @@ Rectangle {
             switch (button) {
             case ButtonHandler.VOLUME_UP:
                 if (obj.isSupported(Remote.F_VOLUME_UP)) {
-                    obj.volumeUp();
+                  volume.stop();
+                  volume.volumeUp = true;
+                  volume.start(obj.volume);
                 }
                 break;
             case ButtonHandler.VOLUME_DOWN:
                 if (obj.isSupported(Remote.F_VOLUME_DOWN)) {
-                    obj.volumeDown();
+                  volume.stop();
+                  volume.volumeUp = false;
+                  volume.start(obj.volume);
                 }
                 break;
             case ButtonHandler.CHANNEL_UP:
@@ -105,8 +109,11 @@ Rectangle {
                 }
                 break;
             }
-
         }
+
+        onButtonReleased: {
+            volume.stop();
+        }      
     }
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
