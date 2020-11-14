@@ -167,7 +167,7 @@ Rectangle {
 
             Repeater {
                 id: repeater
-                model: userMove ? Math.round(percent*36/100) : Math.round(obj.position*36/100)
+                model: userMove ? 36 - Math.round(percent*36/100) : 36 - Math.round(obj.position*36/100)
 
                 delegate: Rectangle {
                     width: card.width; height: 10
@@ -190,7 +190,7 @@ Rectangle {
 
             onPositionChanged: {
                 Haptic.playEffect(Haptic.Bump);
-                percent = Math.round(mouse.y/parent.height*100)
+                percent = Math.round((1 - mouse.y/parent.height)*100)
                 if (percent < 0) percent = 0
                 if (percent > 100) percent = 100
             }
