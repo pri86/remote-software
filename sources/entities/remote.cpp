@@ -99,9 +99,42 @@ void Remote::live() {
     command(RemoteDef::C_LIVE, "");
 }
 
+// color buttons
+void Remote::av_green() {
+  command(RemoteDef::C_FUNCTION_GREEN, "");
+}
+
+void Remote::av_red() {
+  command(RemoteDef::C_FUNCTION_RED, "");
+}
+
+void Remote::av_blue() {
+  command(RemoteDef::C_FUNCTION_BLUE, "");
+}
+
+void Remote::av_yellow() {
+  command(RemoteDef::C_FUNCTION_YELLOW, "");
+}
+
+void Remote::tv_green() {
+  command(RemoteDef::C_DIGIT_11, "");
+}
+
+void Remote::tv_red() {
+  command(RemoteDef::C_DIGIT_12, "");
+}
+
+void Remote::tv_blue() {
+  command(RemoteDef::C_DIGIT_SEPARATOR, "");
+}
+
+void Remote::tv_yellow() {
+  command(RemoteDef::C_DIGIT_ENTER, "");
+}
+
 // navigation
 void Remote::cursorUp() {
-    command(RemoteDef::C_CURSOR_UP, "");
+  command(RemoteDef::C_CURSOR_UP, "");
 }
 
 void Remote::cursorDown() {
@@ -138,6 +171,39 @@ void Remote::exit() {
 
 void Remote::app() {
     command(RemoteDef::C_APP, "");
+}
+
+// extra commands
+void Remote::avr_info() {
+  command(RemoteDef::C_PLAYTOGGLE, "");
+}
+
+void Remote::subtitle() {
+  command(RemoteDef::C_CHANNEL_SEARCH, "");
+}
+
+void Remote::audio() {
+  command(RemoteDef::C_FORMAT_4_3, "");
+}
+
+void Remote::tv_menu() {
+  command(RemoteDef::C_FORMAT_AUTO, "");
+}
+
+void Remote::tv_prev_ch() {
+  command(RemoteDef::C_DIGIT_10, "");
+}
+
+void Remote::kodi_menu() {
+  command(RemoteDef::C_LIVE, "");
+}
+
+void Remote::shield_home() {
+  command(RemoteDef::C_HOME, "");
+}
+
+void Remote::av_settings() {
+  command(RemoteDef::C_INPUT_TUNER_1, "");
 }
 
 // power commands

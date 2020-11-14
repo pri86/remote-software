@@ -66,6 +66,26 @@ class Remote : public Entity, RemoteInterface {
     Q_INVOKABLE void exit();
     Q_INVOKABLE void app();
 
+    //extra
+    Q_INVOKABLE void avr_info();
+    Q_INVOKABLE void subtitle();
+    Q_INVOKABLE void audio();
+    Q_INVOKABLE void tv_menu();
+    Q_INVOKABLE void tv_prev_ch();
+    Q_INVOKABLE void shield_home();
+    Q_INVOKABLE void kodi_menu();
+    Q_INVOKABLE void av_settings();
+
+    // color buttons
+    Q_INVOKABLE void av_green();
+    Q_INVOKABLE void av_red();
+    Q_INVOKABLE void av_blue();
+    Q_INVOKABLE void av_yellow();
+    Q_INVOKABLE void tv_green();
+    Q_INVOKABLE void tv_red();
+    Q_INVOKABLE void tv_blue();
+    Q_INVOKABLE void tv_yellow();
+
     // power commands
     Q_INVOKABLE void powerOn();
     Q_INVOKABLE void powerOff();

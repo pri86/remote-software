@@ -404,7 +404,7 @@ Rectangle {
 
         onButtonPressed: {
             if (StandbyControl.mode === StandbyControl.ON || StandbyControl.mode === StandbyControl.DIM) {
-                if (button === ButtonHandler.TOP_RIGHT) {
+                if (button === ButtonHandler.BOTTOM_LEFT) {
                     buttonContainer.close();
                 }
             }

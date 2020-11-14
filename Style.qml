@@ -129,6 +129,23 @@ QtObject {
         readonly property string warning: "\uE930"
 
         readonly property string eye: "\uE931"
+
+        readonly property string myforward: "\uE802"
+        readonly property string mybackward: "\uE803"
+        readonly property string myinfo: "\uE806"
+        readonly property string mystop: "\uE801"
+        readonly property string myhome: "\uE807"
+        readonly property string myprev: "\uE805"
+        readonly property string mynext: "\uE804"
+        readonly property string myplay: "\uE800"
+        readonly property string myepg: "\uE808"
+        readonly property string myrecord: "\uE809"
+        readonly property string mysubtitle: "\uE80A"
+        readonly property string myaudio: "\uE80B"
+        readonly property string mysettings: "\uE80C"
+        readonly property string mymenu: "\uE80D"
+        readonly property string myreturn: "\uE80E"
+        readonly property string mygoback: "\uE80F"
     }
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

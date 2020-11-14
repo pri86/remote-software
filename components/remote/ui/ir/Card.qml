@@ -121,21 +121,21 @@ Rectangle {
                     obj.cursorOK();
                 }
                 break;
+            case ButtonHandler.TOP_RIGHT:
+              if (obj.isSupported(Remote.F_GUIDE)) {
+                  obj.guide();
+              }
+              break;
             case ButtonHandler.TOP_LEFT:
-                if (obj.isSupported(Remote.F_MUTE_TOGGLE)) {
-                    obj.muteToggle();
-                }
-                break;
-            case ButtonHandler.BOTTOM_LEFT:
                 if (obj.isSupported(Remote.F_BACK)) {
                     obj.back();
                 }
                 break;
             case ButtonHandler.BOTTOM_RIGHT:
-                if (obj.isSupported(Remote.F_MENU)) {
-                    obj.menu();
-                }
-                break;
+              if (obj.isSupported(Remote.F_MUTE_TOGGLE)) {
+                  obj.muteToggle();
+              }
+              break;
             }
 
         }
@@ -179,28 +179,17 @@ Rectangle {
         anchors { top: topItem.bottom; topMargin: 0 }
         currentIndex: 0
 
-        // buttons
-        Loader {
-            asynchronous: true
-            sourceComponent: buttonView
-        }
-
         // transport buttons
         Loader {
             asynchronous: true
             sourceComponent: buttonTransportView
         }
 
-        // channels
+        // number pad
         Loader {
             asynchronous: true
-            sourceComponent: channelView
+            sourceComponent: numPadView
         }
-    }
-
-    Component {
-        id: buttonView
-        CardButtons {}
     }
 
     Component {
@@ -209,8 +198,8 @@ Rectangle {
     }
 
     Component {
-        id: channelView
-        CardChannels {}
+        id: numPadView
+        CardNumPad {}
     }
 
     PageIndicator {
@@ -250,7 +239,7 @@ Rectangle {
             Text {
                 color: Style.color.text
                 opacity: 0.5
-                text: qsTr("Mute") + translateHandler.emptyString
+                text: qsTr("Back") + translateHandler.emptyString
                 verticalAlignment: Text.AlignVCenter
                 anchors { left: parent.left; leftMargin: 50; verticalCenter: parent.verticalCenter }
                 font { family: "Open Sans Regular"; pixelSize: 24 }
@@ -265,7 +254,7 @@ Rectangle {
 
             Text {
                 color: Style.color.text
-                text: Style.icon.square
+                text: Style.icon.square_full
                 width: 60; height: 60
                 verticalAlignment: Text.AlignVCenter; horizontalAlignment: Text.AlignHCenter
                 font {family: "icons"; pixelSize: 60 }
@@ -275,7 +264,7 @@ Rectangle {
             Text {
                 color: Style.color.text
                 opacity: 0.5
-                text: qsTr("Back") + translateHandler.emptyString
+                text: qsTr("Mute") + translateHandler.emptyString
                 verticalAlignment: Text.AlignVCenter
                 anchors { left: parent.left; leftMargin: 50; verticalCenter: parent.verticalCenter }
                 font { family: "Open Sans Regular"; pixelSize: 24 }
@@ -290,7 +279,7 @@ Rectangle {
 
             Text {
                 color: Style.color.text
-                text: Style.icon.square_full
+                text: Style.icon.circle_full
                 width: 60; height: 60
                 verticalAlignment: Text.AlignVCenter; horizontalAlignment: Text.AlignHCenter
                 font { family: "icons"; pixelSize: 60 }
@@ -300,7 +289,7 @@ Rectangle {
             Text {
                 color: Style.color.text
                 opacity: 0.5
-                text: qsTr("Menu") + translateHandler.emptyString
+                text: qsTr("Guide") + translateHandler.emptyString
                 verticalAlignment: Text.AlignVCenter
                 anchors { left: parent.left; leftMargin: 50; verticalCenter: parent.verticalCenter }
                 font { family: "Open Sans Regular"; pixelSize: 24 }

@@ -25,98 +25,238 @@ import Style 1.0
 import Haptic 1.0
 import Entity.Remote 1.0
 
+import "qrc:/basic_ui" as BasicUI
+
 Item {
     width: parent.width - 60
     anchors.horizontalCenter: parent.horizontalCenter
 
-    Flow {
-        width: parent.width - 60
-        anchors { top: parent.top; horizontalCenter: parent.horizontalCenter }
-        spacing: 32
+    Grid {
 
-        Button {
-            visible: obj.isSupported(Remote.F_PLAY)
-            title: qsTr("Play") + translateHandler.emptyString
-            mouseArea.onClicked: { obj.play(); }
-        }
+       columns: 3
+       spacing: 20
 
-        Button {
-            visible: obj.isSupported(Remote.F_PAUSE)
-            title: qsTr("Pause") + translateHandler.emptyString
-            mouseArea.onClicked: { obj.pause(); }
-        }
+       anchors.top: parent.top
+       anchors.horizontalCenter: parent.horizontalCenter
+       topPadding: -5
 
-        Button {
-            visible: obj.isSupported(Remote.F_STOP)
-            title: qsTr("Stop") + translateHandler.emptyString
-            mouseArea.onClicked: { obj.stop(); }
-        }
+       Rectangle {
+           id: bg
+           visible: obj.isSupported(Remote.F_POWER_TOGGLE) || (obj.isSupported(Remote.F_POWER_ON) && obj.isSupported(Remote.F_POWER_OFF))
+           width: 110
+           height: 60
+           radius: height/2
+           color: Style.color.red
 
-        Button {
-            visible: obj.isSupported(Remote.F_PREVIOUS)
-            title: qsTr("Prev") + translateHandler.emptyString
-            mouseArea.onClicked: { obj.previous(); }
-        }
+           Text {
+               color: Style.color.line
+               text: Style.icon.power_on
+               renderType: Text.NativeRendering
+               width: 70
+               height: 70
+               verticalAlignment: Text.AlignVCenter
+               horizontalAlignment: Text.AlignHCenter
+               font {family: "icons"; pixelSize: 60 }
+               anchors.centerIn: parent
+           }
 
-        Button {
-            visible: obj.isSupported(Remote.F_NEXT)
-            title: qsTr("Next") + translateHandler.emptyString
-            mouseArea.onClicked: { obj.next(); }
-        }
+           MouseArea {
+               id: mouseArea
+               anchors.fill: parent
+               onClicked: {
+                   Haptic.playEffect(Haptic.Click);
+                   if (obj.isSupported(Remote.F_POWER_TOGGLE)) {
+                       obj.powerToggle();
+                   } else if (obj.isSupported(Remote.F_POWER_ON) && obj.isSupported(Remote.F_POWER_OFF)) {
+                       if (obj.isOn)
+                           obj.powerOff();
+                       else
+                           obj.powerOn();
+                   }
+               }
+           }
+       } // Rectangle end
 
-        Button {
-            visible: obj.isSupported(Remote.F_INFO)
-            title: qsTr("Info") + translateHandler.emptyString
-            mouseArea.onClicked: { obj.info(); }
-        }
+       Button {
+           visible: obj.isSupported(Remote.F_HOME)
+           title: Style.icon.myhome
+           mouseArea.onClicked: {
+               obj.shield_home();
+           }
+       }
 
-        Button {
-            visible: obj.isSupported(Remote.F_BACKWARD)
-            title: qsTr("BWD") + translateHandler.emptyString
-            mouseArea.onClicked: { obj.backward(); }
-        }
+       Button {
+           visible: obj.isSupported(Remote.F_RECORD)
+           title: Style.icon.myrecord
+           mouseArea.onClicked: {
+               obj.record();
+           }
+       }
 
-        Button {
-            visible: obj.isSupported(Remote.F_FORWARD)
-            title: qsTr("FWD") + translateHandler.emptyString
-            mouseArea.onClicked: { obj.forward(); }
-        }
+       Button {
+           visible: obj.isSupported(Remote.F_PREVIOUS)
+           title: Style.icon.myprev
+           mouseArea.onClicked: {
+               obj.previous();
+           }
+       }
 
-        Button {
-            visible: obj.isSupported(Remote.F_RECORD)
-            title: qsTr("Rec") + translateHandler.emptyString
-            mouseArea.onClicked: { obj.record(); }
-        }
+       Button {
+           visible: obj.isSupported(Remote.F_PLAY)
+           title: Style.icon.myplay
+           mouseArea.onClicked: {
+               obj.play();
+           }
+       }
 
-        Item { width: 118; height: 70 }
+       Button {
+           visible: obj.isSupported(Remote.F_NEXT)
+           title: Style.icon.mynext
+           mouseArea.onClicked: {
+               obj.next();
+           }
+       }
 
-        Button {
-            visible: obj.isSupported(Remote.F_EXIT)
-            title: qsTr("Exit") + translateHandler.emptyString
-            mouseArea.onClicked: { obj.exit(); }
-        }
+       Button {
+           visible: obj.isSupported(Remote.F_BACKWARD)
+           title: Style.icon.mybackward
+           mouseArea.onClicked: {
+               obj.backward();
+           }
+       }
 
-        Item { width: 118; height: 70 }
+       Button {
+           visible: obj.isSupported(Remote.F_STOP)
+           title: Style.icon.mystop
+           mouseArea.onClicked: {
+               obj.stop();
+           }
+       }
 
-        Button {
-            visible: obj.isSupported(Remote.F_BACK)
-            title: qsTr("Back") + translateHandler.emptyString
-            mouseArea.onClicked: { obj.back(); }
-        }
+       Button {
+           visible: obj.isSupported(Remote.F_FORWARD)
+           title: Style.icon.myforward
+           mouseArea.onClicked: {
+               obj.forward();
+           }
+       }
 
-        Button {
-            visible: obj.isSupported(Remote.F_HOME)
-            title: qsTr("Home") + translateHandler.emptyString
-            mouseArea.onClicked: { obj.home(); }
-        }
+       Button {
+           visible: obj.isSupported(Remote.F_FORMAT_4_3)
+           title: Style.icon.myaudio
+           mouseArea.onClicked: {
+               obj.audio();
+           }
+       }
 
-        Button {
-            visible: obj.isSupported(Remote.F_MENU)
-            title: qsTr("Menu") + translateHandler.emptyString
-            mouseArea.onClicked: { obj.menu(); }
-        }
+       Button {
+           visible: obj.isSupported(Remote.F_CHANNEL_SEARCH)
+           title: Style.icon.mysubtitle
+           mouseArea.onClicked: {
+               obj.subtitle();
+           }
+       }
+
+       Button {
+           visible: obj.isSupported(Remote.F_LIVE)
+           title: Style.icon.mymenu
+           mouseArea.onClicked: {
+               obj.kodi_menu();
+           }
+       }
+
+       Button {
+           visible: obj.isSupported(Remote.F_MENU)
+           title: Style.icon.mygoback
+           mouseArea.onClicked: {
+               obj.menu();
+           }
+       }
+
+      Button {
+          visible: obj.isSupported(Remote.F_INFO)
+          title: Style.icon.myinfo
+          mouseArea.onClicked: {
+              obj.info();
+          }
+      }
+
+      Button {
+          visible: obj.isSupported(Remote.F_INPUT_TUNER_1)
+          title: Style.icon.mysettings
+          mouseArea.onClicked: {
+              obj.av_settings();
+          }
+      }
+    }
+
+    Grid {
+
+       columns: 4
+       spacing: 50
+
+       anchors.bottom: parent.bottom
+       anchors.horizontalCenter: parent.horizontalCenter
+       bottomPadding: -30
+
+       Rectangle {
+           visible: obj.isSupported(Remote.F_FUNCTION_GREEN)
+           width: 50
+           height: 50
+           radius: height/2
+           color: "#41b812"
+           MouseArea {
+               anchors.fill: parent
+               onClicked: {
+                   Haptic.playEffect(Haptic.Click);
+                   obj.av_green();
+               }
+           }
+       }
+
+       Rectangle {
+           visible: obj.isSupported(Remote.F_FUNCTION_RED)
+           width: 50
+           height: 50
+           radius: height/2
+           color: "#d13530"
+           MouseArea {
+               anchors.fill: parent
+               onClicked: {
+                   Haptic.playEffect(Haptic.Click);
+                   obj.av_red();
+               }
+           }
+       }
+
+       Rectangle {
+           visible: obj.isSupported(Remote.F_FUNCTION_BLUE)
+           width: 50
+           height: 50
+           radius: height/2
+           color: "#3347cc"
+           MouseArea {
+               anchors.fill: parent
+               onClicked: {
+                   Haptic.playEffect(Haptic.Click);
+                   obj.av_blue();
+               }
+           }
+       }
+
+       Rectangle {
+           visible: obj.isSupported(Remote.F_FUNCTION_YELLOW)
+           width: 50
+           height: 50
+           radius: height/2
+           color: "#e9ed09"
+           MouseArea {
+               anchors.fill: parent
+               onClicked: {
+                   Haptic.playEffect(Haptic.Click);
+                   obj.av_yellow();
+               }
+           }
+       }
     }
 }
-
-
-
