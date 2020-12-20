@@ -50,7 +50,6 @@
         <file>basic_ui/ContextMenu.qml</file>
         <file>basic_ui/Tag.qml</file>
         <file>components/media_player/ui/CardPlaylists.qml</file>
-        <file>components/remote/ui/ir/CardButtonsTransport.qml</file>
         <file>components/remote/ui/ir/CardNumPad.qml</file>
         <file>components/remote/ui/ir/Button.qml</file>
         <file>components/climate/ui/Button.qml</file>
@@ -83,5 +82,7 @@
         <file>basic_ui/InitialSetup.qml</file>
         <file>setup/SetupStep4Other.qml</file>
         <file>basic_ui/ConfigError.qml</file>
+        <file>components/remote/ui/ir/CardButtonsTransport.qml</file>
+        <file>components/FpsItem.qml</file>
     </qresource>
 </RCC>
