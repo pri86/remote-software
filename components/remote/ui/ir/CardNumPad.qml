@@ -40,27 +40,28 @@ Item {
        anchors.horizontalCenter: parent.horizontalCenter
        topPadding: -5
 
+
        Button {
-           visible: obj.isSupported(Remote.F_APP)
-           title: qsTr("Shield") + translateHandler.emptyString
+            visible: obj.isSupported(Remote.F_FAVORITE)
+            title: "Option"
+            mouseArea.onClicked: {
+                obj.tv_option();
+            }
+       }
+
+       Button {
+           visible: obj.isSupported(Remote.F_OUTPUT_HDMI_2)
+           title: "Home"
            mouseArea.onClicked: {
-               obj.app();
+               obj.tv_home();
            }
        }
 
        Button {
-           visible: obj.isSupported(Remote.F_SOURCE)
-           title: qsTr("Source") + translateHandler.emptyString
+           visible: obj.isSupported(Remote.F_FORMAT_AUTO)
+           title: Style.icon.mysettings
            mouseArea.onClicked: {
-               obj.source();
-           }
-       }
-
-       Button {
-           visible: obj.isSupported(Remote.F_PLAYTOGGLE)
-           title: Style.icon.myinfo
-           mouseArea.onClicked: {
-               obj.avr_info();
+              obj.tv_menu();
            }
        }
 
@@ -137,10 +138,10 @@ Item {
        }
 
        Button {
-           visible: obj.isSupported(Remote.F_FORMAT_AUTO)
-           title: Style.icon.mysettings
+           visible: obj.isSupported(Remote.F_OUTPUT_HDMI_1)
+           title: Style.icon.myinfo
            mouseArea.onClicked: {
-               obj.tv_menu();
+               obj.tv_info();
            }
        }
 

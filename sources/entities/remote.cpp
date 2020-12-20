@@ -186,6 +186,10 @@ void Remote::tv_home() {
   command(RemoteDef::C_OUTPUT_HDMI_2, "");
 }
 
+void Remote::tv_option() {
+  command(RemoteDef::C_FAVORITE, "");
+}
+
 void Remote::subtitle() {
   command(RemoteDef::C_CHANNEL_SEARCH, "");
 }

@@ -182,10 +182,10 @@ Item {
       }
 
       Button {
-          visible: obj.isSupported(Remote.F_INPUT_TUNER_1)
+          visible: obj.isSupported(Remote.F_INPUT_TUNER_2)
           title: Style.icon.mysettings
           mouseArea.onClicked: {
-              obj.av_settings();
+              obj.kodi_settings();
           }
       }
     }
