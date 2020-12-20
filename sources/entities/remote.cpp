@@ -178,6 +178,14 @@ void Remote::avr_info() {
   command(RemoteDef::C_PLAYTOGGLE, "");
 }
 
+void Remote::tv_info() {
+  command(RemoteDef::C_OUTPUT_HDMI_1, "");
+}
+
+void Remote::tv_home() {
+  command(RemoteDef::C_OUTPUT_HDMI_2, "");
+}
+
 void Remote::subtitle() {
   command(RemoteDef::C_CHANNEL_SEARCH, "");
 }
@@ -204,6 +212,10 @@ void Remote::shield_home() {
 
 void Remote::av_settings() {
   command(RemoteDef::C_INPUT_TUNER_1, "");
+}
+
+void Remote::kodi_settings() {
+  command(RemoteDef::C_INPUT_TUNER_2, "");
 }
 
 // power commands
